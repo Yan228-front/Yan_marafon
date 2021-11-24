@@ -35,7 +35,7 @@ function createElement(tag, className) {
   return $tag;
 }
 
-function createPlayer(playerObj) {
+const createPlayer = (playerObj) => {
   const $player = createElement("div", "player" + playerObj.player);
   const $progressbar = createElement("div", "progressbar");
   const $character = createElement("div", "character");
@@ -51,14 +51,15 @@ function createPlayer(playerObj) {
   $progressbar.appendChild($life);
 
   $character.appendChild($img);
+  w;
 
   $player.appendChild($progressbar);
   $player.appendChild($character);
 
   return $player;
-}
+};
 
-function changeHp(player) {
+const changeHp = (player) => {
   const $playerLife = document.querySelector(
     ".player" + player.player + " .life"
   );
@@ -72,14 +73,14 @@ function changeHp(player) {
     $arenas.appendChild(playerLose(player.name));
     $randomButton.disabled = true;
   }
-}
+};
 
-function playerLose(name) {
+const playerLose = (name) => {
   const $loseTitle = createElement("div", "loseTitle");
   $loseTitle.innerText = name + " lose";
 
   return $loseTitle;
-}
+};
 
 $arenas.appendChild(createPlayer(player1));
 $arenas.appendChild(createPlayer(player2));
