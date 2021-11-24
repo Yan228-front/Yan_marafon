@@ -8,7 +8,7 @@ const player1 = {
   img: "http://reactmarathon-api.herokuapp.com/assets/scorpion.gif",
   weapon: ["огонь", "меч"],
 
-  attack: function (name) {
+  attack: (name) => {
     console.log(name + " " + "Figth!!!");
   },
 };
@@ -20,7 +20,7 @@ const player2 = {
   img: "http://reactmarathon-api.herokuapp.com/assets/subzero.gif",
   weapon: ["лед", "меч"],
 
-  attack: function (name) {
+  attack: (name) => {
     console.log(name + " " + "Figth!!!");
   },
 };
