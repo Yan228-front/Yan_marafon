@@ -74,15 +74,6 @@ function changeHp(player) {
   }
 }
 
-function playerWins(name) {
-  const $winTitle = createElement("div", "winTitle");
-  $winTitle.innerText = name + " wins";
-
-  //тут наверное должна быть логика , ну у меня не получилось
-
-  return $winTitle;
-}
-
 function playerLose(name) {
   const $loseTitle = createElement("div", "loseTitle");
   $loseTitle.innerText = name + " lose";
